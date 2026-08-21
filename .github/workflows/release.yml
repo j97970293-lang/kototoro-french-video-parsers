@@ -47,7 +47,7 @@ jobs:
           [
             {
               "name": "Kototoro — vidéos françaises",
-              "pkg": "org.skepsun.kototoro.parsers",
+              "pkg": "org.j97970293.kototoro.frenchvideoparsers",
               "version": "0.1.${{ github.run_number }}",
               "code": ${{ github.run_number }},
               "apk": "plugin.jar",
