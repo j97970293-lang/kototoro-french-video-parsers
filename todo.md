@@ -10,4 +10,4 @@
 - [x] Ajouter des tests unitaires pour le filtrage linguistique, les liens HTTPS de lecture et les pages d’attribution.
 - [x] Compiler le JAR puis le convertir en plugin dexé afin de vérifier l’artefact Kototoro.
 - [x] Ajouter la documentation d’installation, les limites de contenu et une politique de contribution.
-- [ ] Créer et publier publiquement le dépôt GitHub avec une version initiale.
+- [x] Créer et publier publiquement le dépôt GitHub avec une version initiale.
