@@ -11,3 +11,5 @@
 - [x] Compiler le JAR puis le convertir en plugin dexé afin de vérifier l’artefact Kototoro.
 - [x] Ajouter la documentation d’installation, les limites de contenu et une politique de contribution.
 - [x] Créer et publier publiquement le dépôt GitHub avec une version initiale.
+- [x] Diagnostiquer pourquoi l’index public n’est pas découvert dans Kototoro et corriger le format ou l’URL nécessaires : le `pkg` du premier index doublonnait celui du dépôt officiel et a été rendu unique.
+- [x] Auditer les dépôts CloudStream, Nuvio et anime indiqués afin d’identifier uniquement des sources de streaming publiquement réutilisables et compatibles avec Kototoro : aucune licence explicite n’a été trouvée dans leurs métadonnées GitHub.

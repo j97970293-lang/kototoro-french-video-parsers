@@ -17,6 +17,12 @@ https://raw.githubusercontent.com/j97970293-lang/kototoro-french-video-parsers/r
 
 L’URL sera disponible dès que la première version GitHub Actions aura été publiée. Dans les réglages de **PeerTube francophone**, vous pouvez modifier le domaine. Saisissez seulement le nom de domaine d’une instance qui expose une API PeerTube publique, par exemple `framatube.org`, sans chemin ni paramètres.
 
+### Dépannage : le dépôt ou l’extension ne s’affiche pas
+
+La première publication utilisait par erreur le même identifiant de catalogue que le dépôt officiel Kototoro. Depuis la version `0.1.4`, le plugin utilise l’identifiant distinct `org.j97970293.kototoro.frenchvideoparsers` et peut donc coexister avec le dépôt officiel.
+
+Si vous avez ajouté l’URL avant ce correctif, supprimez ce dépôt dans **Réglages → Sources → Extensions → Dépôts**, ajoutez à nouveau l’URL ci-dessus, validez la demande de confiance, puis actualisez la liste des extensions **JAR**. L’extension doit apparaître sous le nom **Kototoro — vidéos françaises**. GitHub peut conserver l’ancien index dans son cache pendant quelques minutes après une publication ; dans ce cas, recommencez l’actualisation après ce délai.
+
 ## Construire localement
 
 Le projet requiert un JDK 17 pour compiler, mais cible le bytecode Java 8 afin de rester compatible avec le pipeline D8 de Kototoro.
