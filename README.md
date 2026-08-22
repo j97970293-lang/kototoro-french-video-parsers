@@ -1,11 +1,13 @@
 # Parsers vidéo français pour Kototoro
 
-Ce dépôt publie un plugin **Kototoro** de type vidéo. Sa première version ne contient que deux sources dont les interfaces sont publiques : une instance PeerTube francophone configurable et les fichiers de la catégorie **Videos in French** de Wikimedia Commons. Le plugin ne fournit pas de lecteur, ne contourne ni DRM, ni contrôle d’accès, ni géoblocage, et n’essaie pas de résoudre des lecteurs tiers.
+Ce dépôt publie un plugin **Kototoro** de type vidéo. Il contient quatre sources dont les interfaces sont publiques : une instance PeerTube francophone configurable, les fichiers de la catégorie **Videos in French** de Wikimedia Commons, ainsi que les catalogues French-Manga et French-Stream. Le plugin ne fournit pas de lecteur, ne contourne ni DRM, ni contrôle d’accès, ni géoblocage, et n’essaie pas de résoudre des lecteurs tiers.
 
 | Source | Fonctionnement | Langue et limites |
 | --- | --- | --- |
 | **PeerTube francophone** | Interroge l’API REST publique de l’instance configurée et restitue son URL HTTPS de fichier ou de playlist. | L’instance par défaut est Framatube. Les éléments sont filtrés sur le champ API `language.id = fr`; l’utilisateur peut choisir une autre instance. |
 | **Wikimedia Commons — vidéos françaises** | Recherche les fichiers de la catégorie `Videos in French`, puis utilise les métadonnées et URL publiées par MediaWiki. | Les fichiers conservent leur page d’attribution, leur licence et leur format d’origine, notamment WebM ou Ogg. |
+| **French-Manga** | Recherche AJAX, fiches, saisons et épisodes; lit les URLs média directes renvoyées publiquement. | Films/séries en français; les hosters non résolus restent indisponibles. |
+| **French-Stream** | Recherche HTML, fiches films/séries et épisodes; lit les URLs média directes renvoyées publiquement. | Films/séries en français; aucune résolution de CAPTCHA, DRM ou accès protégé. |
 
 ## Installation
 
@@ -16,6 +18,10 @@ https://raw.githubusercontent.com/j97970293-lang/kototoro-french-video-parsers/r
 ```
 
 L’URL sera disponible dès que la première version GitHub Actions aura été publiée. Dans les réglages de **PeerTube francophone**, vous pouvez modifier le domaine. Saisissez seulement le nom de domaine d’une instance qui expose une API PeerTube publique, par exemple `framatube.org`, sans chemin ni paramètres.
+
+### Sources incluses
+
+Les deux nouveaux parsers sont identifiés dans Kototoro par `FRENCH_MANGA` et `FRENCH_STREAM`, avec `locale = fr` et `ContentType.VIDEO`. Après actualisation du dépôt, l’index public et le JAR sont reconstruits automatiquement par GitHub Actions.
 
 ### Dépannage : le dépôt ou l’extension ne s’affiche pas
 
